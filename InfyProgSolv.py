@@ -15,13 +15,14 @@ for i in range(len(strNum)):
 		array.append(strNum[i:n])
 
 array = list(map(int,array))
+array = list(set(list)^{0,1})
 array.sort()
 
-for i in array[2:]:
+for i in array:
 	root = sqrt(i)
 	x = ceil(root)
 	y = floor(root)
-	if x==y:continue
+	if x==y: continue
 	if x*y in array:
 		if count >= 2:
 			count =0
