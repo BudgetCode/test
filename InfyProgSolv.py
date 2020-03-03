@@ -15,10 +15,9 @@ for i in range(len(strNum)):
 		array.append(strNum[i:n])
 
 array = list(map(int,array))
-array = list(set(array)^set([0,1]))
 array.sort()
 
-for i in array:
+for i in array[2:]:
 	root = sqrt(i)
 	x = ceil(root)
 	y = floor(root)
