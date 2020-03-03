@@ -1,5 +1,5 @@
 """
-take an input say (12630). Find out all the numbers in this input which were a multiplication of consecutive numbers. It included 2(1*2), 6(2*3), 12(3*4), 30(5*6).
+take an input say (12630). Find out all the longest sequence of numbers in this input which were a multiplication of consecutive numbers. It included 2(1*2), 6(2*3), 12(3*4), 30(5*6).
 """
 strNum = input()
 number = int(strNum) 
