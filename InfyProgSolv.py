@@ -1,4 +1,3 @@
-
 """
 take an input say (12630). Find out the longest sequence numbers in this input which were a multiplication of consecutive numbers. It included 2(1*2), 6(2*3), 12(3*4), 30(5*6).
 """
@@ -6,7 +5,7 @@ take an input say (12630). Find out the longest sequence numbers in this input w
 from math import sqrt ,ceil ,floor
 
 strNum = input()
-count = iter = 0
+count = length = 0
 array = []
 result = [dict()]
 
@@ -15,7 +14,7 @@ for i in range(len(strNum)):
 		array.append(strNum[i:n])
 
 array = list(map(int,array))
-array = list(set(list)^{0,1})
+array = list(set(array)^{0,1})
 array.sort()
 
 for i in array:
@@ -26,9 +25,9 @@ for i in array:
 	if x*y in array:
 		if count >= 2:
 			count =0
-			iter +=1
+			length +=1
 			result.append(dict())
-		result[iter][x*y] = y,x
+		result[length][x*y] = y,x
 	else:count+=1
 
 print(max(result,key=lambda x:len(x)))
@@ -42,7 +41,7 @@ from math import sqrt ,ceil
 
 strNum = input()
 number = ceil(sqrt(int(strNum)))
-x = count = iter = 0
+x = count = length = 0
 nRes = [dict()]
 for i in range(1,number):
 	x = i*(i+1)
@@ -50,9 +49,9 @@ for i in range(1,number):
 	if x in strNum:
 		if count >= 2:
 			count = 0
-			iter+=1
+			length+=1
 			nRes.append(dict())
-		nRes[iter][x] = (i,i+1)
+		nRes[length][x] = (i,i+1)
 	else: count+=1
 
 print(max(nRes,key=lambda x:len(x)))
