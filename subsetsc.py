@@ -3,13 +3,6 @@ array = list(map(int,input().split()))
 count = 2**(n-1)
 negArr = len([i for i in array if i < 0])
 
-#[-1] -> [[] [-1]] 1
-#[-1,-2] -> [[][-1][-2][-1,-2]] 2
-#[-1,-2,-3] -> [[][-1][-2][-3],[-1,-2],[-1,-3],[-3,-2],[-1,-3,-2]] 4
-#[-1,2,-3] -> [[][-1][2][-3],[-1,2],[-1,-3],[-3,2],[-1,-3,2]] 4 
-#[-1,2,-3] -> [[][1][2][-3],[1,2],[1,-3],[-3,2],[1,-3,2]] 4 
-
-
 from itertools import chain, combinations
 x = len(array)
 x = [[array[j] for j in range(x) if (i & (1 << j))] for i in range(1<<x)][1:]
