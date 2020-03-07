@@ -1,7 +1,6 @@
 n = int(input())
 array = list(map(int,input().split()))
 count = 2**(n-1)
-negArr = len([i for i in array if i < 0])
 
 from itertools import chain, combinations
 x = len(array)
